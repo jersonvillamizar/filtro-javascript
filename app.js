@@ -280,4 +280,5 @@ window.addEventListener("load" , () => {
     listado.style.display = "none";
     ingresar_juegos.style.display = "none";
     listado_juegos.style.display = "none";
+    compra_juego.style.display = "none";
 })
