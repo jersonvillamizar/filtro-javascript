@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Untitled</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="./normalize.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    
+    <body>
+        <div>
+            <nav class="navbar navbar-dark bg-dark fixed-top ">
+                <div class="container-fluid navegador">
+                    <a class="navbar-brand" href="#">Campus GameSoft</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Campus GameSoft</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pagina_inicio" id="boton_home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ingresar_clientes" id="boton_crear">Registrar Cliente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#listado" id="boton_listar">Listar Cliente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ingresar_juegos" id="boton_crear_juegos">Registrar Video Juego</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#listado_juegos" id="boton_listar_juegos">Video Juegos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#compra_juego" id="boton_comprar_juegos">Comprar Juego</a>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="pagina_inicio" class="cuerpo_principal">
+            <h1 style="text-align: center;">Campus GameSoft</h1>
+            <br>
+            <br>
+            <br>
+            <h2 style="text-align: center;">Dirijase al menú en la parte superior para navegar</h2>
+        </div>
+
+        <div id="ingresar_clientes" class="cuerpo_principal">
+            <h2>Registrar Cliente</h2>
+            <form action="" id="clientes_formulario" class="d-flex flex-column principal_contenido">
+                <label for="cliente_id">
+                    Ingrese su numero de identificacion: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="cliente_id" required>
+                </label>
+                <label for="cliente_nombre">
+                    Ingrese su nombre: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="cliente_nombre" required>
+                </label>
+                <label for="cliente_apellido">
+                    Ingrese sus apellidos: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="cliente_apellido" required>
+                </label>
+                <label for="cliente_telefono">
+                    Telefono: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="cliente_telefono" required>
+                </label>
+                <label for="cliente_correo">
+                    Correo electrónico: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="cliente_correo" required>
+                </label>
+                <label for="cliente_fecha">
+                    Fecha de nacimiento: 
+                    <input type="date" placeholder="Ingrese el valor requerido" id="cliente_fecha" required>
+                </label>
+                <label for="cliente_nacionalidad">
+                    Nacionalidad: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="cliente_nacionalidad" required>
+                </label>
+                <button type="submit" class="estilo_boton">Registrarse</button>
+            </form>
+        </div>
+        
+        <div id="listado">
+            <h2>Listado de Clientes</h2>
+            <input type="text" id="buscador" placeholder="Buscar Cliente">
+            <div id="grupo_listado">
+            </div>
+        </div>
+    
+        <div id="grupo_modificar" style="display: none;" class="caja_modificar">
+            <section class="modificar_cliente">
+                <h2>Modificar cliente</h2>
+                <form action="" id="formulario_modificar" class="d-flex flex-column principal_contenido">
+                    <label for="modificar_id">
+                        Ingrese su numero de identificacion: 
+                        <input type="text" placeholder="Ingrese el valor requerido" id="modificar_id" disabled>
+                    </label>
+                    <label for="modificar_nombre">
+                        Ingrese su nombre: 
+                        <input type="text" placeholder="Ingrese el valor requerido" id="modificar_nombre" required>
+                    </label>
+                    <label for="modificar_apellido">
+                        Ingrese sus apellidos: 
+                        <input type="text" placeholder="Ingrese el valor requerido" id="modificar_apellido" required>
+                    </label>
+                    <label for="modificar_telefono">
+                        Telefono: 
+                        <input type="text" placeholder="Ingrese el valor requerido" id="modificar_telefono" required>
+                    </label>
+                    <label for="modificar_correo">
+                        Correo electrónico: 
+                        <input type="text" placeholder="Ingrese el valor requerido" id="modificar_correo" required>
+                    </label>
+                    <label for="modificar_fecha">
+                        Fecha de nacimiento: 
+                        <input type="date" placeholder="Ingrese el valor requerido" id="modificar_fecha" required>
+                    </label>
+                    <label for="modificar_nacionalidad">
+                        Nacionalidad: 
+                        <input type="text" placeholder="Ingrese el valor requerido" id="modificar_nacionalidad" required>
+                    </label>
+                    <button type="submit" >Modificar</button>
+                    <button type="button" onclick="cerrar_pestana()" >Cancelar</button>
+                </form>
+            </section>
+        </div>
+
+        <div id="ingresar_juegos" class="cuerpo_principal">
+            <h2>Registrar Juego</h2>
+            <form action="" id="juegos_formulario" class="d-flex flex-column principal_contenido">
+                <label for="juego_id">
+                    Ingrese ID del juego: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="juego_id" required>
+                </label>
+                <label for="juego_nombre">
+                    Ingrese el nombre: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="juego_nombre" required>
+                </label>
+                <label for="juego_tematica">
+                    Ingrese las tematicas: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="juego_tematica" required>
+                </label>
+                <label for="juego_valor">
+                    Precio: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="juego_valor" required>
+                </label>
+                <label for="juego_puntos">
+                    Puntos: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="juego_puntos" required>
+                </label>
+                <label for="juego_url">
+                    Url imagen: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="juego_url">
+                </label>
+                <button type="submit" class="estilo_boton">Registrar Juego</button>
+            </form>
+        </div>
+        
+        <div id="listado_juegos">
+            <h2>Listado de Juegos</h2>
+            <input type="text" id="buscador_juegos" placeholder="Buscar Juego">
+            <div id="grupo_listado_juegos">
+            </div>
+        </div>
+
+        <div id="compra_juego" class="cuerpo_principal">
+            <h2>Comprar Juego</h2>
+            <form action="" id="compra_formulario" class="d-flex flex-column principal_contenido">
+                <label for="juego_id">
+                    Ingrese ID del Cliente: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="cliente_id_compra" required>
+                </label>
+                <label for="juego_nombre">
+                    Ingrese ID del Juego: 
+                    <input type="text" placeholder="Ingrese el valor requerido" id="juego_id_compra" required>
+                </label>
+                <button type="submit" class="estilo_boton">Comprar</button>
+            </form>
+        </div>
+
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Web design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Hosting</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Company Name</h3>
+                            <p>Explore the world of gaming with our dedicated website. Discover the latest releases, connect with fellow gamers, and stay up to date with the hottest trends. Dive into the virtual realm today!</p>
+                        </div>
+                        <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                    </div>
+                    <p class="copyright">Company Name © 2018</p>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>   
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="module" src="./app.js"></script>
+</body>
+
+</html>
