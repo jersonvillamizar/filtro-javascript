@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Sedgwick+Ave+Display&display=swap');
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: black !important;
+    font-family: 'Itim', cursive !important;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    position: fixed !important;
+    transition: all 500ms;
+    align-items: center;
+    z-index: 2;
+    background-color: #023f1d;
+}
+
+.container-fluid{
+    width: 100%;
+    justify-content: space-around !important;
+    align-items: center;
+}
+
+.navbar-collapse{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.navbar-nav{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.nav-item{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.nav-item a{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    transition: all 500ms;
+    border-radius: 50px;
+}
+
+.nav-item a:hover{
+    background-color: white;
+    color: black !important;
+}
+
+.nav-item img{
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav .nav-icon{
+    background-color: white;
+}
+
+nav p{
+    color: white !important;
+    margin-top: 20px;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+main{
+    padding-top: 100px !important;
+    height: 90vh;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3rem;
+}
+
+.header_main{
+    margin: 1rem;
+    color: white;
+}
+
+.header_main input{
+    border-radius: 10px;
+}
+
+.btn-one{
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    transition: all 500ms;
+    background-color: #023f1d;
+}
+
+.btn-one:hover{
+    color: black;
+    background-color: white;
+}
+
+.section_clients{
+    background-color: white;
+    width: 95%;
+    border: 2px solid black;
+}
+
+h1, h2{
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: white !important;
+    text-align: center;
+}
+
+.table_clients{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 3fr 2fr 2fr 2fr 1fr 1fr;
+}
+
+.table_clients button img{
+    opacity: 0;
+}
+
+.table_clients button img.up{
+    opacity: 1;
+}
+
+.table_clients button img.selected{
+    opacity: 1;
+}
+
+.untouchable{
+    pointer-events: none;
+}
+
+#show_clients{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.contain_client{
+    background-color: black;
+    gap: 5px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 2fr 3fr 2fr 2fr 2fr 1fr 1fr;
+    transition: all 500ms;
+}
+
+.contain_client:hover h5{
+    background-color: #023f1d;
+    color: white;
+}
+
+.contain_client h5{
+    height: 80%;
+    font-size: 1rem;
+    background-color: white;
+    margin: 0;
+}
+
+.modal-header{
+    background-color: black;
+}
+
+.modal-body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.modal-footer{
+    background-color: black !important;
+}
+
+#data_new_client{
+    display: flex;
+    flex-direction: column;
+}
+
+#options{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.info_cart{
+    border: 5px solid black;
+    border-bottom: 0;
+    background-color: black;
+    gap: 5px;
+    width: 25rem;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+}
+
+.info_cart p{
+    background-color: white;
+    color: black;
+    height: 90%;
+    padding-left: 1rem;
+}
+
+footer{
+    background-color: white;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Games</title>
+    <link rel="stylesheet" href="../assets/css/games.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <p class="navbar-toggler icon" href="#">Campus GameSoft</p>
+            <button class="navbar-toggler nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="/assets/images/icon.png" alt="">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-clients.html">Gestion Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gestion Videojuegos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Juegos Campus GameSoft</h1>
+        <div class="header_main">
+            <label for="">Buscar por:</label>
+            <select id="select_search" onchange="search()">
+                <option value="id">ID</option>
+                <option value="name">Nombre</option>
+                <option value="theme">Tematica</option>
+                <option value="price">Precio</option>
+                <option value="points">Puntos</option>
+            </select>
+            <input id="text_search" type="text" oninput="search()">
+            
+            <button type="button" class="btn-one" data-bs-toggle="modal" data-bs-target="#modal_add_game">
+                Registrar Nuevo
+            </button>
+        </div>
+        <div class="section_games">
+            <div class="table_games">
+                <button onclick="order(0, 'id')">Id <img src="../assets/images/arrow-up.svg"></button>
+                <button onclick="order(1, 'name')">Nombre <img src="../assets/images/arrow-up.svg"></button>
+                <button onclick="order(2, 'theme')">Tematica <img src="../assets/images/arrow-up.svg"></button>
+                <button onclick="order(3, 'price')">Precio <img src="../assets/images/arrow-up.svg"></button>
+                <button onclick="order(4, 'points')">Puntos <img src="../assets/images/arrow-up.svg"></button>
+                <button>Eliminar</button>
+            </div>
+            <div id="show_current_games"></div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modal_add_game" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal_add_gameLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modal_add_gameLabel">Registrar nuevo cliente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="contain_new_game">
+                        <div id="data_new_game">
+                            <h3>Informacion</h3>
+                            <label for="">Ingresa el nombre del juego: </label>
+                            <input type="text" id="">
+                            <label for="">Ingresa la URL de la portada: </label>
+                            <p>(Si la imagen de validacion no cambia, verifica la URL)</p>
+                            <p>Si no tienes la URL se aplicará la predeterminada</p>
+                            <input type="text" id="" oninput="img_new_game(this)">
+                            <label for="">Selecciona la tematica: </label>
+                            <select name="" id="select_theme">
+                                <option value="Aventura">Aventura</option>
+                                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                                <option value="Fantasía">Fantasía</option>
+                                <option value="Terror">Terror</option>
+                                <option value="BattleRoyale">BattleRoyale</option>
+                                <option value="Estrategia">Estrategia</option>
+                            </select>
+                            <label for="">Ingresa el precio: </label>
+                            <input type="number" id="" oninput="calculate_points(this)">
+                            <h5>El juego tendrá 0 puntos de Fidelizacion</h5>
+                            <button class="btn-one" onclick="add_game()">Guardar</button>
+                        </div>
+                        <div id="img_new_game">
+                            <h3>Validacion de portada</h3>
+                            <img src="https://thypix.com/wp-content/uploads/2021/10/grey-mobile-wallpaper-background-thypix-98-350x700.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cls_mod_new_gm" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2023 Company, Inc</p>
+    </footer>
+
+    <script src="../assets/js/game.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

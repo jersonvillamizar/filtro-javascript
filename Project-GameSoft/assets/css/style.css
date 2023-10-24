@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Sedgwick+Ave+Display&display=swap');
+
+html{
+    font-size: 18px;
+}
+
+body{
+    background-color: black !important;
+    font-family: 'Itim', cursive !important;
+}
+
+nav{
+    background-color: #023f1d;
+    width: 100%;
+    height: 70px;
+    position: fixed !important;
+    transition: all 500ms;
+    align-items: center;
+    z-index: 2;
+}
+
+.container-fluid{
+    width: 100%;
+    justify-content: space-around !important;
+    align-items: center;
+    background-color: #023f1d;
+}
+
+.navbar-collapse{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.navbar-nav{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.nav-item{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.nav-item a{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    transition: all 500ms;
+    border-radius: 50px;
+}
+
+.nav-item a:hover{
+    color: white !important;
+    background-color: #006b2e;
+}
+
+.nav-item img{
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav .nav-icon{
+    background-color: white;
+}
+
+nav p{
+    color: white !important;
+    margin-top: 20px;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+
+main{
+    padding-top: 100px !important;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2{
+    color: white !important;
+    margin: 20px 0 !important;
+    font-family: 'Sedgwick Ave Display', cursive;
+    text-align: center;
+}
+
+#show_games{
+    background-color: #023f1d;
+    border-radius: 2rem;
+}
+
+#contain_games{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    width: 15rem;
+    height: 24.5rem !important;
+    overflow: hidden;
+    transition: 500ms all;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.card_text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: 500ms all;
+    padding: 10px;
+}
+.card_text h2{
+    font-size: 2rem;
+}
+
+.card_text h3{
+    font-size: 1rem;
+}
+
+.card_text button{
+    padding: 5px;
+    border: 0;
+    background-color: white;
+    border-radius: 20px;
+    transition: all 500ms;
+}
+
+.card_text button:hover{
+    color: white;
+    background-color: #006b2e;
+}
+
+.card:hover .card_text {
+    opacity: 1;
+}
+
+.info_cart{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+}
+
+.contain_cart{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+}
+
+.contain_cart button{
+    border-radius: 10px;
+    border: 0;
+    height: 80%;
+    width: 70%;
+}
+
+.pay_none{
+    pointer-events: none;
+}
+
+.contain_clients{
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contain_pay{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+
+.modal-header button{
+    background-color: white;
+}
+
+.modal-header, .modal-body, .modal-footer{
+    color: white !important;
+    background-color: black !important;
+}
+
+.b_client{
+    border: 0;
+    border-radius: 5px;
+    margin: 10px;
+    width: 20%;
+    transition: all 500ms;
+}
+
+.b_client:hover{
+    background-color: #006b2e;
+    color: white;
+}
+
+.modal-footer .btn-one{
+    color: white;
+    transition: all 500ms;
+    background-color: #023f1d;
+}
+
+.modal-footer .btn-one:hover{
+    color: black;
+    background-color: white;
+}
+
+footer{
+    background-color: white;
+    margin-top: 5rem;
+}
