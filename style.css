@@ -1,5 +1,7 @@
 body{
-    background-color: #33393f;
+  background-image: url(./video-games-Dark-Souls-Black-Iron-Tarkus-darkness-screenshot-1920x1080-px-714779-wallhere.com.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .navegador{
@@ -16,9 +18,7 @@ body{
 }
 
 .cuerpo_principal, #listado, #listado_juegos{
-    background-image: url(./video-games-Dark-Souls-Black-Iron-Tarkus-darkness-screenshot-1920x1080-px-714779-wallhere.com.jpg);
-    background-size: cover;
-    background-position: center;
+    
     flex-direction: column;
     max-width: 1080px;
     min-height: 80vh;
